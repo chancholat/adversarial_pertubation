@@ -58,7 +58,7 @@ class BaseOCR(nn.Module):
 
     def get_plate_and_bboxes(self, predictions):
         """
-        Extract the bounding box from model predictions
+        Extract the bounding box and the plate characters from model predictions
         :params:
             predictions: model prediction.
             
