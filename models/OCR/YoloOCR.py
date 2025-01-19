@@ -28,7 +28,7 @@ def check_point_linear(x, y, x1, y1, x2, y2):
     return(math.isclose(y_pred, y, abs_tol = 3)), y_pred - y
 
 def yoloLPOCR():
-  yolo_LP_OCR = torch.hub.load('yolov5', 'custom', path='./assets/pretrained/License-Plate-Recognition/model/LP_ocr.pt', force_reload=True, source='local')
+  yolo_LP_OCR = torch.hub.load('./models/OCR/models/yolov5', 'custom', path='./assets/pretrained/License-Plate-Recognition/model/LP_ocr.pt', force_reload=True, source='local')
   for param in yolo_LP_OCR.model.model.parameters():
     param.requires_grad = False
   return yolo_LP_OCR
