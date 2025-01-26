@@ -1,6 +1,8 @@
 import numpy as np
 import cv2
 
+# Tested the original code.
+
 class DeID:
     """
     Base class for deid function
