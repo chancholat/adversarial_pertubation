@@ -51,12 +51,12 @@ def _create(name, pretrained=True, channels=3, classes=80, autoshape=True, verbo
     """
     from pathlib import Path
 
-    from models.common import AutoShape, DetectMultiBackend
-    from models.experimental import attempt_load
-    from models.yolo import ClassificationModel, DetectionModel, SegmentationModel
-    from utils.downloads import attempt_download
-    from utils.general import LOGGER, ROOT, check_requirements, intersect_dicts, logging
-    from utils.torch_utils import select_device
+    from .models.common import AutoShape, DetectMultiBackend
+    from .models.experimental import attempt_load
+    from .models.yolo import ClassificationModel, DetectionModel, SegmentationModel
+    from .utils.downloads import attempt_download
+    from .utils.general import LOGGER, ROOT, check_requirements, intersect_dicts, logging
+    from .utils.torch_utils import select_device
 
     if not verbose:
         LOGGER.setLevel(logging.WARNING)
